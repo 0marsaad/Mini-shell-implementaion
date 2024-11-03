@@ -4,9 +4,7 @@
 // Command Data Structure
 struct SimpleCommand
 {
-    // Available space for arguments currently preallocated
     int _numberOfAvailableArguments;
-    // Number of arguments
     int _numberOfArguments;
     char **_arguments;
     int _pipe;

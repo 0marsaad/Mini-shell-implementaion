@@ -67,15 +67,14 @@ command_and_args:
 
 arg_list:
 	arg_list argument
-	| /* can be empty */
+	| 
 	;
 
 argument:
 	WORD {
 		printf("   Yacc: insert argument \"%s\"\n", $1);
 		if (Command::_currentSimpleCommand) {
-			Command::_currentSimpleCommand->insertArgument(strdup($1)); // strdup to ensure memory is allocated
-		}
+			Command::_currentSimpleCommand->insertArgument(strdup($1)); /		}
 	}
 	;
 
@@ -83,25 +82,25 @@ command_word:
 	WORD {
 		printf("   Yacc: insert command \"%s\"\n", $1);
 		Command::_currentSimpleCommand = new SimpleCommand();
-		Command::_currentSimpleCommand->insertArgument(strdup($1)); // strdup to ensure memory is allocated
-	}
+		Command::_currentSimpleCommand->insertArgument(strdup($1)); 
+        }
 	;
 
 iomodifier_opt:
 	GREAT WORD {
 		printf("   Yacc: set output to \"%s\"\n", $2);
-		Command::_currentCommand._outFile = strdup($2); // strdup to handle memory allocation
+		Command::_currentCommand._outFile = strdup($2); 
 	}
 	| GREATGREAT WORD {
 		printf("   Yacc: set append output to \"%s\"\n", $2);
 		Command::_currentCommand._append = 1;
-		Command::_currentCommand._outFile = strdup($2); // strdup to handle memory allocation
+		Command::_currentCommand._outFile = strdup($2); 
 	}
 	| LESS WORD {
 		printf("   Yacc: set input to \"%s\"\n", $2);
-		Command::_currentCommand._inputFile = strdup($2); // strdup to handle memory allocation
+		Command::_currentCommand._inputFile = strdup($2); 
 	}
-	| /* can be empty */
+	| 
 	;
 
 background_opt:
@@ -109,7 +108,7 @@ background_opt:
 		printf("   Yacc: set background execution\n");
 		Command::_currentCommand._background = 1;
 	}
-	| /* can be empty */
+	| 
 	;
 
 %%
