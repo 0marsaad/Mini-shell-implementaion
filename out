@@ -1,2 +1,5 @@
 -rw-rw-r-- 1 omar-saad omar-saad 34048 Nov  2 18:53 command.o
 -rw-rw-r-- 1 omar-saad omar-saad 34048 Nov  2 19:04 command.o
+-rwxrwxr-x 1 omar-saad omar-saad  6729 Nov  3 21:40 command.cc
+-rwxrwxr-x 1 omar-saad omar-saad   855 Nov  3 20:50 command.h
+-rw-rw-r-- 1 omar-saad omar-saad 44528 Nov  3 21:39 command.o
