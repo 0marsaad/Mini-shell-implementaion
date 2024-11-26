@@ -74,7 +74,7 @@ argument:
 	WORD {
 		printf("   Yacc: insert argument \"%s\"\n", $1);
 		if (Command::_currentSimpleCommand) {
-			Command::_currentSimpleCommand->insertArgument(strdup($1)); /		}
+			Command::_currentSimpleCommand->insertArgument(strdup($1)); }
 	}
 	;
 
